@@ -4,9 +4,9 @@ import './typer.css'
 const Typer = ({text}) => {
   return (
     <div>
-    <p className="line-1 anim-typewriter">
-      {text}
-    </p>
+      <div className="typewriter">
+        <h1>{text}</h1>
+      </div>
     </div>
   )
 }
