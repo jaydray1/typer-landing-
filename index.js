@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Typer from './typer/Typer';
 import './style.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      text: 'Hi, my name is Jon-Michael.'
+      text: 'Jon-Michael J. Dreher'
     };
   }
 
   render() {
     return (
       <div>
-        <Typer text={this.state.text} />
+        <h1 style={{color: 'white'}}>{this.state.text}</h1>
       </div>
     );
   }
