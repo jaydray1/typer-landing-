@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Projects from './projects/Projects';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 import './style.css';
+
+library.add(fab);
 
 const Container = styled.div`
   display: flex;
@@ -10,9 +15,12 @@ const Container = styled.div`
 `;
 
 const Detail = styled.p`  
-  font-size: 20px;
+  font-size: 22px;
   text-align: center; 
   width: 50%;
+  @media only screen and (min-width: 768px) {
+    font-size: 2em;
+  }
 `;
 
 const Banner = styled.h1`
@@ -37,6 +45,7 @@ class App extends Component {
       <Container>
         <Banner>{this.state.text}</Banner>
         <Detail className="detail">{this.state.detail}</Detail>
+        <Projects />
       </Container>
     );
   }
